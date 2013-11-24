@@ -13,4 +13,6 @@ class BlackjackTest extends PHPUnit_Framework_TestCase {
      * 5. When an ace is added and the score is >= 11, the score is incremented by 1.
      */
 
+    // Note, with no tests in this class PHPUnit is not happy. The build is already Red! :)
+
 }
