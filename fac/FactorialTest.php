@@ -14,7 +14,7 @@ class FactorialTest extends PHPUnit_Framework_TestCase
     public function testFactorialZero()
     {
         // Complete this assertion
-        $this->assertEquals(1, $this->fac->f(0));
+        $this->assertEquals(2, $this->fac->f(0));
     }
 
     public function testFactorialOne() {
@@ -22,7 +22,7 @@ class FactorialTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException Exception
+     * expectedException Exception
      */
     public function testFactorialLessThanZero() {
         $this->fac->f(-1);
