@@ -14,6 +14,37 @@ class FactorialTest extends PHPUnit_Framework_TestCase
     public function testFactorialZero()
     {
         // Complete this assertion
+        $this->assertEquals(1, $this->fac->f(0));
+    }
+
+    public function testFactorialOne() {
+        $this->assertEquals(1, $this->fac->f(1));
+    }
+
+    /**
+     * @expectedException Exception
+     */
+    public function testFactorialLessThanZero() {
+        $this->fac->f(-1);
+    }
+
+    public function testFactorialOfTen() {
+        $this->assertEquals(3628800, $this->fac->f(10));
+    }
+
+    public function testFactorialOfChar()
+    {
+        // Complete this assertion
+        $this->assertEquals(1, $this->fac->f('a'));
+    }
+
+    /**
+     * @expectedException Exception
+     */
+    public function testFactorialGreaterThan9999()
+    {
+        // Complete this assertion
+        $this->fac->f(10000);
     }
 
     /*

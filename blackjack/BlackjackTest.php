@@ -1,6 +1,35 @@
 <?php
 
+require_once 'BlackjackCalculator.php';
+
 class BlackjackTest extends PHPUnit_Framework_TestCase {
+
+    protected $calc;
+
+    protected function setUp()
+    {
+        $this->calc = new BlackjackCalculator;
+    }
+
+    public function testNoCardAddedScoreIsZero()
+    {
+        $this->assertEquals(0, $this->calc->getScore());
+    }
+
+    public function testNumberCardIncrementsScore()
+    {
+        $this->calc->addCard(1);
+        $this->assertEquals(5, $this->calc->getScore());
+    }
+
+    public function testNumberCardIncrementsScoreTwice()
+    {
+        $this->calc->addCard(1);
+        $this->calc->addCard(1);
+        $this->assertEquals(10, $this->calc->getScore());
+    }
+
+
 
     /*
      * Complete this test class using the TDD methodology. Red, Green, Refactor.
